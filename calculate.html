@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+  
+</head>
+<body>
+  <h1>Calculator</h1>
+  <form>
+    <input type="text" id="result" readonly>
+    <br>
+    <button type="button" onclick="addToResult('1')">1</button>
+    <button type="button" onclick="addToResult('2')">2</button>
+    <button type="button" onclick="addToResult('3')">3</button>
+    <button type="button" onclick="addToResult('+')">+</button>
+    <br>
+    <button type="button" onclick="addToResult('4')">4</button>
+    <button type="button" onclick="addToResult('5')">5</button>
+    <button type="button" onclick="addToResult('6')">6</button>
+    <button type="button" onclick="addToResult('-')">-</button>
+    <br>
+    <button type="button" onclick="addToResult('7')">7</button>
+    <button type="button" onclick="addToResult('8')">8</button>
+    <button type="button" onclick="addToResult('9')">9</button>
+    <button type="button" onclick="addToResult('*')">*</button>
+    <br>
+    <button type="button" onclick="addToResult('0')">0</button>
+    <button type="button" onclick="addToResult('.')">.</button>
+    <button type="button" onclick="calculate()">=</button>
+    <button type="button" onclick="addToResult('/')">/</button>
+    <br>
+    <button type="button" onclick="clearResult()">Clear</button>
+  </form>
+  <p>Or visit the <a href="https://codeium.ai">Codeium</a> page.</p>
+  <script>
+    function addToResult(value) {
+      document.getElementById('result').value += value;
+    }
+
+    function calculate() {
+      const result = eval(document.getElementById('result').value);
+      document.getElementById('result').value = result;
+    }
+
+    function clearResult() {
+      document.getElementById('result').value = '';
+    }
+  </script>
+</body>
+</html>
